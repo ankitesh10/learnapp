@@ -1,0 +1,39 @@
+// COLOR VARIABLES
+
+:root {
+  --color-primary: #00aaff;
+
+  --color-grey-light-1: #3ac6a7;
+
+  --color-grey-dark-1: #5b5b5b;
+}
+
+// FONT VARIABLES
+$font: 'Open Sans', sans-serif;
+
+// Break points
+
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  font-family: $font;
+  color: var(--color-grey-dark-1);
+  font-weight: 300;
+  line-height: 1.6;
+}
