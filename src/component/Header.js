@@ -10,7 +10,6 @@ class Header extends React.Component {
     super(props);
 
     this.btnRef = React.createRef();
-    this.headerRef = React.createRef();
 
   }
 
