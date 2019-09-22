@@ -1,0 +1,119 @@
+.header {
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  height: 90vh;
+
+  &__text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .heading-1 {
+    text-align: center;
+  }
+
+  &__point {
+    display: flex;
+
+    margin-top: 3rem;
+
+    svg {
+      width: 5rem;
+      height: 5rem;
+      margin: 0 2rem;
+    }
+
+    p {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+}
+
+.nav {
+  padding-top: 6rem;
+
+  &__list {
+    list-style: none;
+    width: 100%;
+    z-index: 9;
+  }
+
+  &__sub {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 37.5em) {
+      display: none;
+      justify-content: center;
+      background-color: var(--color-primary);
+      padding: 2rem;
+
+      flex-direction: column;
+    }
+  }
+
+  &__sub-item {
+    &:not(:last-child) {
+      margin-right: 7rem;
+
+      @media only screen and (max-width: 37.5em) {
+        margin-right: 0 !important;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  &__burger {
+    display: none;
+    background-color: #fff;
+    border: none;
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    top: -3rem;
+    right: 3rem;
+
+    &:focus{
+      outline: none;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      background-color: #fff;
+      border: none;
+      width: 4rem;
+      height: 2px;
+    }
+
+    &::before {
+      transform: translateY(-1.3rem);
+    }
+
+    &::after {
+      transform: translateY(1rem);
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      display: block;
+    }
+  }
+
+  &__burger--active + &__sub {
+    display: flex;
+  }
+}

@@ -3,16 +3,17 @@
 :root {
   --color-primary: #00aaff;
 
+  --color-primary-light: #4ad5eb;
+
   --color-grey-light-1: #3ac6a7;
 
   --color-grey-dark-1: #5b5b5b;
 }
 
 // FONT VARIABLES
-$font: 'Open Sans', sans-serif;
+$font: "Open Sans", sans-serif;
 
 // Break points
-
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
 $bp-medium: 50em; //800px
@@ -29,6 +30,14 @@ $bp-small: 37.5em; //600px
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  @media only screen and (max-width: 87.5em) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 40%;
+  }
 }
 
 body {
@@ -36,4 +45,40 @@ body {
   color: var(--color-grey-dark-1);
   font-weight: 300;
   line-height: 1.6;
+}
+
+.container {
+  @media only screen and (min-width: 100em) {
+    max-width: 1550px;
+  }
+}
+
+.section-course {
+  padding-top: 15rem;
+  position: relative;
+
+  .container{
+    padding: 0 12rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 6rem;
+    }
+  }
+
+  &__img{
+    position: absolute;
+    top: 25rem;
+    left: 0;
+    width: 14rem;
+  }
+}
+
+// Utilities class
+
+.u-mr-s {
+  margin-right: 3rem !important;
+}
+
+.u-mt-l {
+  margin-top: 5rem !important;
 }

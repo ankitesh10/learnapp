@@ -1,0 +1,30 @@
+.timeselectbutton {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  padding: 2rem 3.5rem;
+  background-color: rgba(#fff, 0.5);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+
+  &:focus{
+    outline: none;
+  }
+
+  &--active {
+    background-color: #fff;
+  }
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  &__container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}
